@@ -1,4 +1,4 @@
-controller_frequency: 10.0
+controller_frequency: <controlfreq> # a number describing how often the local planner is asked to compute new velocity commands. This also has a high impact on low cpu resources. A value of 10 hz might be a good start.
 controller_patience: 15.0
 clearing_radius: 0.25
 footprint_padding: 0.03

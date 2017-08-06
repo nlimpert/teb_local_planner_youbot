@@ -16,13 +16,13 @@ TebLocalPlannerROS:
 
  # Robot
          
- max_vel_x: 0.6
- max_vel_x_backwards: 0.6
- max_vel_y: 0.6
- max_vel_theta: 1.0
- acc_lim_x: 1.0
- acc_lim_y: 1.0
- acc_lim_theta: 1.0
+ max_vel_x: <vel_x> # maximum linear.x velocity in m/s - you should start with 0.1
+ max_vel_x_backwards: <vel_x_backwards> # maximum negative linear.x velocity in m/s - you should start with 0.1
+ max_vel_y: <vel_y> # maximum linear.y velocity in m/s - you should start with 0.1 - this value is used to define maximum velocity for strafing
+ max_vel_theta: <vel_ori> # maximum angular.z rotational velocity - a value of 1.0 is a good start
+ acc_lim_x: <acc_x> # max linear accceleration - 1.0 is a good start
+ acc_lim_y: <acc_y> # max linear accceleration - 1.0 is a good start
+ acc_lim_theta: <acc_theta> # max angular acceleration - 1.0 is a good start
  min_turning_radius: 0.0 # omni-drive robot (can turn on place!)
 
  footprint_model: 
@@ -32,8 +32,8 @@ TebLocalPlannerROS:
 
  # GoalTolerance
     
- xy_goal_tolerance: 0.2
- yaw_goal_tolerance: 0.1
+ xy_goal_tolerance: <xy_tolerance> # linear goal tolerance - do not set this value too low otherwise the robot might start to oscillate
+ yaw_goal_tolerance: <yaw_tolerance> # angular goal tolerance - do not set this value too low otherwise the robot might start to oscillate
  free_goal_vel: False
     
  # Obstacles
